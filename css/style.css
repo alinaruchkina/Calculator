@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 352px;
+  height: 627px;
+  background-color: #ccc;
+  border-radius: 40px;
+}
+
+.content {
+  display: flex;
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+}
+
+.enter__section_button {
+  width: 88px;
+  height: 72px;
+  border-width: 0px;
+  font-size: 40px;
+}
+
+.enter__section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_devide {
+  font-size: 60px;
+}
+
+.button_border_null {
+  border-radius: 0px 0px 0px 40px;
+}
+
+.button_border_plus {
+  border-radius: 0px 0px 40px 0px;
+}
+
+.enter__section_number {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  font-size: 30px;
+  margin-top: 30px;
+}

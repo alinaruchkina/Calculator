@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src='js/script.js'></script>
+</head>
+<body>
+    <div class='main'>
+        <div class='content'>
+            <div class="content__example">
+            </div>
+            <div class="content__result">
+
+            </div>
+        </div>
+            <div class='enter'>
+                <div class="enter__section">
+                    <button class='enter__section_button'>...</button>
+                    <button class='enter__section_button' onclick='clearExample()'>C</button>
+                    <button class='enter__section_button' onclick='setPercent()'>%</button>
+                    <button class='enter__section_button' onclick='deleteLastNumber()'><img class='image' src="img/iconDelete.jpg" /></button>
+                </div>
+                <div class="enter__section_number">
+                    <button class='enter__section_button' onclick='writeNumber(7)'>7</button>
+                    <button class='enter__section_button' onclick='writeNumber(8)'>8</button>
+                    <button class='enter__section_button' onclick='writeNumber(9)'>9</button>
+                    <button class='enter__section_button button_devide' onclick='writeNumber("/")'>÷</button>
+                </div>
+                <div class="enter__section_number">
+                    <button class='enter__section_button' onclick='writeNumber(4)'>4</button>
+                    <button class='enter__section_button' onclick='writeNumber(5)'>5</button>
+                    <button class='enter__section_button' onclick='writeNumber(6)'>6</button>
+                    <button class='enter__section_button' onclick='writeNumber("*")'>X</button>
+                </div>
+                <div class="enter__section_number">
+                    <button class='enter__section_button' onclick='writeNumber(1)'>1</button>
+                    <button class='enter__section_button' onclick='writeNumber(2)'>2</button>
+                    <button class='enter__section_button' onclick='writeNumber(3)'>3</button>
+                    <button class='enter__section_button' onclick='minusNumber("-")'>—</button>
+                </div>
+                <div class="enter__section_number">
+                    <button class='enter__section_button button_border_null' onclick='writeNumber(0)'>0</button>
+                    <button class='enter__section_button' onclick='writeNumber(".")'>.</button>
+                    <button class='enter__section_button' onclick='enterResult()'>=</button>
+                    <button class='enter__section_button button_border_plus' onclick='writeNumber("+")'>+</button>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
