@@ -26,14 +26,15 @@ function clearExample() {
 
 function deleteLastNumber() {
   if (outputExample[outputExample.length - 1] === '%') {
-    example = example.pop('/100*');
-    outputExample = outputExample.pop();
+    number.pop();
+    outputExample = outputExample.slice(0, outputExample[outputExample.length - 1]);
   } else {
     number.pop();
   }
-  example = number.join(''); // объединяет все эл-ты массива в строку
+  example = number.join('');
   outputExample = number.join('');
-  document.querySelector('.content__example').innerHTML = outputExample; //записываем в див
+  outputExample = outputExample.replace('/100*', '%');
+  document.querySelector('.content__example').innerHTML = outputExample;
 }
 
 function minusNumber(symbol) {
@@ -47,6 +48,6 @@ function setPercent() {
   number.push('/100*');
   example = number.join('');
   outputExample = number.join('');
-  outputExample = outputExample.replace('/100*', '%');
+  outputExample = outputExample.replace('/100*', '%'); //осуществляет замену только первого совпадения.
   document.querySelector('.content__example').innerHTML = outputExample;
 }
