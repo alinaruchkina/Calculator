@@ -7,49 +7,51 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src='js/script.js'></script>
 </head>
 <body>
-    <div class='main main_white'>
+    <div id='background' class='main main_white'>
         <div class='content'>
-            <div class="content__example">
+            <div class='color_click'>
+                <button onclick="changeThemeOnWhite()">white</button>
+                <button onclick="changeThemeOnBlue()">blue</button>
+                <button onclick="changeThemeOnBlack()">black</button>
             </div>
-            <div class="content__result">
-
-            </div>
+            <div class="content__example" id='numbers'></div>
+            <div class="content__result" id='numbers'></div>
         </div>
             <div class='enter'>
                 <div class="enter__section">
-                   <div class='enter__section_button'> <button class='enter__section_button color__white border__for__point'>...</button></div>
-                    <button class='enter__section_button color__white_light' onclick='clearExample()'>C</button>
-                    <button class='enter__section_button color__white_light' onclick='setPercent()'>%</button>
-                    <button class='enter__section_button color__white_light border__for__delete' onclick='deleteLastNumber()'><i class="material-icons">arrow_back</i></button>
+                   <div class='enter__section_button'> <button id='arithmetic_operation' class='enter__section_button color__white border__for__point'>...</button></div>
+                    <button id='arithmetic_operation' class='enter__section_button' onclick='clearExample()'>C</button>
+                    <button id='arithmetic_operation' class='enter__section_button' onclick='setPercent()'>%</button>
+                    <button id='arithmetic_operation' class='enter__section_button border__for__delete' onclick='deleteLastNumber()'><i class="material-icons">arrow_back</i></button>
                 </div>
                 <div class="enter__section_number">
-                    <button class='enter__section_button' onclick='writeNumber(7)'>7</button>
-                    <button class='enter__section_button' onclick='writeNumber(8)'>8</button>
-                    <button class='enter__section_button' onclick='writeNumber(9)'>9</button>
-                    <button class='enter__section_button button_devide color__white_light' onclick='writeNumber("/")'>÷</button>
+                    <button id='numbers' class='enter__section_button' onclick='writeNumber(7)'>7</button>
+                    <button id='numbers' class='enter__section_button' onclick='writeNumber(8)'>8</button>
+                    <button id='numbers' class='enter__section_button' onclick='writeNumber(9)'>9</button>
+                    <button id='arithmetic_operation' class='enter__section_button button_devide color__white_light' onclick='writeNumber("/")'>÷</button>
                 </div>
                 <div class="enter__section_number">
-                    <button class='enter__section_button' onclick='writeNumber(4)'>4</button>
-                    <button class='enter__section_button' onclick='writeNumber(5)'>5</button>
-                    <button class='enter__section_button' onclick='writeNumber(6)'>6</button>
-                    <button class='enter__section_button color__white_light' onclick='writeNumber("*")'>X</button>
+                    <button id='numbers' class='enter__section_button' onclick='writeNumber(4)'>4</button>
+                    <button id='numbers' class='enter__section_button' onclick='writeNumber(5)'>5</button>
+                    <button id='numbers' class='enter__section_button' onclick='writeNumber(6)'>6</button>
+                    <button id='arithmetic_operation' class='enter__section_button color__white_light' onclick='writeNumber("*")'>X</button>
                 </div>
                 <div class="enter__section_number">
-                    <button class='enter__section_button' onclick='writeNumber(1)'>1</button>
-                    <button class='enter__section_button' onclick='writeNumber(2)'>2</button>
-                    <button class='enter__section_button' onclick='writeNumber(3)'>3</button>
-                    <button class='enter__section_button color__white_light' onclick='minusNumber("-")'>—</button>
+                    <button id='numbers' class='enter__section_button' onclick='writeNumber(1)'>1</button>
+                    <button id='numbers' class='enter__section_button' onclick='writeNumber(2)'>2</button>
+                    <button id='numbers' class='enter__section_button' onclick='writeNumber(3)'>3</button>
+                    <button id='arithmetic_operation' class='enter__section_button color__white_light' onclick='minusNumber("-")'>—</button>
                 </div>
                 <div class="enter__section_number">
-                    <button class='enter__section_button button_border_null' onclick='writeNumber(0)'>0</button>
-                    <button class='enter__section_button' onclick='writeNumber(".")'>.</button>
-                    <div class='enter__section_button'><button class='enter__section_button border__for__equal color__white_dark' onclick='enterResult()'>=</button></div>
-                    <button class='enter__section_button button_border_plus color__white' onclick='writeNumber("+")'>+</button>
+                    <button id='numbers' class='enter__section_button button_border_null' onclick='writeNumber(0)'>0</button>
+                    <button id='numbers' class='enter__section_button' onclick='writeNumber(".")'>.</button>
+                    <div class='enter__section_button'><button id='equally' class='enter__section_button border__for__equal color__white_dark' onclick='enterResult()'>=</button></div>
+                    <button id='arithmetic_operation' class='enter__section_button button_border_plus color__white' onclick='writeNumber("+")'>+</button>
                 </div>
             </div>
     </div>
 </body>
+<script src='js/script.js'></script>
 </html>

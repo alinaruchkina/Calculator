@@ -114,3 +114,8 @@ button {
 .color_blue {
   background-color: #d7e1f7;
 }
+.color_click {
+  display: flex;
+  justify-content: space-between;
+  width: 295px;
+}
