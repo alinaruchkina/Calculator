@@ -2,6 +2,8 @@ let number = [];
 let result = '';
 let example = '';
 let outputExample = '';
+let menu = document.querySelector('#menu');
+const white = ['#fff', '#123'];
 function writeNumber(symbol) {
   number.push(symbol);
   example = number.join('');
@@ -52,7 +54,13 @@ function setPercent() {
   document.querySelector('.content__example').innerHTML = outputExample;
 }
 
-function changeThemeOnWhite() {
+function changeThemeOnWhite(param) {
+  arr;
+  if (param === 'white') {
+    arr = white;
+  } else if (param === 'blue') {
+    arr = blue;
+  }
   let background = document.querySelector('#background');
   background.style.background = `linear-gradient(#EBF6FF, #C6E3FF)`;
 
@@ -70,6 +78,7 @@ function changeThemeOnWhite() {
     item.style.cssText = `color: #717B8D;
     background-color: #E5F3FF`;
   });
+  menu.classList.add('invisible');
 }
 changeThemeOnWhite();
 
@@ -91,6 +100,7 @@ function changeThemeOnBlue() {
     item.style.cssText = `color: #DEF6FF;
     background-color: #30BDFF`;
   });
+  menu.classList.add('invisible');
 }
 // changeThemeOnBlue();
 
@@ -112,5 +122,15 @@ function changeThemeOnBlack() {
     item.style.cssText = `color: #B5B5B5;
     background-color: #3B4147`;
   });
+
+  menu.classList.add('invisible');
 }
-// changeThemeOnBlack();
+
+function openMenuColor() {
+  menu.classList.remove('invisible');
+  addEventListener('click', (e) => {
+    if (!e.path.includes('div#menu.menu.invisible')) {
+      menu.classList.add('invisible');
+    }
+  });
+}

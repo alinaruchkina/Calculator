@@ -11,17 +11,20 @@
 <body>
     <div id='background' class='main main_white'>
         <div class='content'>
-            <div class='color_click'>
-                <button onclick="changeThemeOnWhite()">white</button>
-                <button onclick="changeThemeOnBlue()">blue</button>
-                <button onclick="changeThemeOnBlack()">black</button>
-            </div>
             <div class="content__example" id='numbers'></div>
             <div class="content__result" id='numbers'></div>
         </div>
             <div class='enter'>
                 <div class="enter__section">
-                   <div class='enter__section_button'> <button id='arithmetic_operation' class='enter__section_button color__white border__for__point'>...</button></div>
+
+                   <div class='enter__section_button'> 
+                       <div id='menu' class='menu invisible'> 
+                            <button id="close" onclick="changeThemeOnWhite()">WHITE</button>
+                            <button id="close" onclick="changeThemeOnBlue()">BLUE</button>
+                            <button id="close" onclick="changeThemeOnBlack()">BLACK</button>
+                       </div>
+                        <button onclick="openMenuColor(); event.stopPropagation()" id='arithmetic_operation' class='enter__section_button color__white border__for__point'>...</button>
+                    </div>
                     <button id='arithmetic_operation' class='enter__section_button' onclick='clearExample()'>C</button>
                     <button id='arithmetic_operation' class='enter__section_button' onclick='setPercent()'>%</button>
                     <button id='arithmetic_operation' class='enter__section_button border__for__delete' onclick='deleteLastNumber()'><i class="material-icons">arrow_back</i></button>
