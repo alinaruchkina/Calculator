@@ -40,6 +40,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .enter__section {
@@ -118,4 +119,24 @@ button {
   display: flex;
   justify-content: space-between;
   width: 295px;
+}
+
+.menu {
+  position: absolute;
+  z-index: 10;
+  left: 48px;
+  top: 58px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-between;
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
 }
