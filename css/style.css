@@ -124,8 +124,8 @@ button {
 .menu {
   position: absolute;
   z-index: 10;
-  left: 48px;
-  top: 58px;
+  left: 2px;
+  top: 72px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -139,4 +139,31 @@ button {
 
 .invisible {
   display: none;
+}
+
+.dropdown {
+  width: 86px;
+  height: 42px;
+}
+
+.cyrcle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: solid 1px;
+}
+
+.menu__button {
+  display: flex;
+}
+
+.cyrcle_white {
+  background: white;
+  border: black;
+}
+.cyrcle_blue {
+  background: blue;
+}
+.cyrcle_black {
+  background: black;
 }
