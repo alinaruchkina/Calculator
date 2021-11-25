@@ -16,12 +16,20 @@
         </div>
             <div class='enter'>
                 <div class="enter__section">
-
-                   <div class='enter__section_button'> 
-                       <div id='menu' class='menu invisible'> 
-                            <button id="close" onclick="changeThemeOnWhite()">WHITE</button>
-                            <button id="close" onclick="changeThemeOnBlue()">BLUE</button>
-                            <button id="close" onclick="changeThemeOnBlack()">BLACK</button>
+                   <div class='enter__section_button'>
+                       <div id='menu' class='menu invisible'>
+                           <div class="menu__button">
+                            <div class="cyrcle"></div>
+                            <button class='dropdown' onclick="changeThemeOnWhite()">WHITE</button>
+                           </div>
+                           <div class="menu__button">
+                            <div class="cyrcle"></div>
+                            <button class='dropdown' onclick="changeThemeOnBlue()">BLUE</button>
+                           </div>
+                           <div class="menu__button">
+                            <div class="cyrcle"></div>
+                            <button class='dropdown' onclick="changeThemeOnBlack()">BLACK</button>
+                           </div>
                        </div>
                         <button onclick="openMenuColor(); event.stopPropagation()" id='arithmetic_operation' class='enter__section_button color__white border__for__point'>...</button>
                     </div>

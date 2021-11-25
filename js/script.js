@@ -9,7 +9,7 @@ function writeNumber(symbol) {
   example = number.join('');
   outputExample = number.join(''); // 100/100*87
   outputExample = outputExample.replace('/100*', '%'); // 100%87
-  document.querySelector('.content__example').innerHTML = outputExample;
+  document.querySelector('.content__example').innerHTML = outputExample; //возвращает первый элем-т соответ-ий селектору и присваивает пустой строке
 }
 
 function enterResult() {
@@ -28,12 +28,12 @@ function clearExample() {
 
 function deleteLastNumber() {
   if (outputExample[outputExample.length - 1] === '%') {
-    number.pop();
-    outputExample = outputExample.slice(0, outputExample[outputExample.length - 1]);
+    number.pop(); //удаляет последний эл-т из массива и возвр его значение
+    outputExample = outputExample.slice(0, outputExample[outputExample.length - 1]); // возвр новый массив, который содержащит копии эл-тов из исходного массива
   } else {
     number.pop();
   }
-  example = number.join('');
+  example = number.join(''); // объединяет все эл-ты массива в строку
   outputExample = number.join('');
   outputExample = outputExample.replace('/100*', '%');
   document.querySelector('.content__example').innerHTML = outputExample;
@@ -55,12 +55,14 @@ function setPercent() {
 }
 
 function changeThemeOnWhite(param) {
-  arr;
   if (param === 'white') {
     arr = white;
   } else if (param === 'blue') {
     arr = blue;
+  } else if (param === 'black') {
+    arr = black;
   }
+
   let background = document.querySelector('#background');
   background.style.background = `linear-gradient(#EBF6FF, #C6E3FF)`;
 
@@ -84,7 +86,7 @@ changeThemeOnWhite();
 
 function changeThemeOnBlue() {
   let background = document.querySelector('#background');
-  background.style.background = `linear-gradient(#00CFFF, #0186FF)`;
+  background.style.background = `linear-gradient(#00CFFF, #0186FF)`; // color, background-color , style.color,  cssText is different
 
   let equally = document.querySelector('#equally');
   equally.style.cssText = `color: #DEF6FF;
