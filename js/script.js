@@ -3,7 +3,9 @@ let result = '';
 let example = '';
 let outputExample = '';
 let menu = document.querySelector('#menu');
-const white = ['#fff', '#123'];
+let white = ['#EBF6FF', '#C6E3FF', '#6B7486', '#B1D1FF', '#717B8D', '#717B8D', '#E5F3FF'];
+let blue = ['#00D1FF', '#0085FF', '#DEF6FF', '#007FFF', '#D7F3FF', '#DEF6FF', '#30BDFF'];
+let black = ['#2B3237', '#171C20', '#B1B1B2', '#303437', '#B1B1B2', '#B5B5B5', '#3B4147'];
 function writeNumber(symbol) {
   number.push(symbol);
   example = number.join('');
@@ -54,7 +56,8 @@ function setPercent() {
   document.querySelector('.content__example').innerHTML = outputExample;
 }
 
-function changeThemeOnWhite(param) {
+function changeColorTheme(param) {
+  let arr = [];
   if (param === 'white') {
     arr = white;
   } else if (param === 'blue') {
@@ -64,69 +67,25 @@ function changeThemeOnWhite(param) {
   }
 
   let background = document.querySelector('#background');
-  background.style.background = `linear-gradient(#EBF6FF, #C6E3FF)`;
+  background.style.background = `linear-gradient(${arr[0]}, ${arr[1]})`;
 
   let equally = document.querySelector('#equally');
-  equally.style.cssText = `color: #6B7486;
-  background-color: #B1D1FF`;
+  equally.style.cssText = `color: ${arr[2]};
+  background-color: ${arr[3]}`;
 
   let numbers = document.querySelectorAll('#numbers');
   numbers.forEach((item) => {
-    item.style.color = `#717B8D`;
+    item.style.color = `${arr[4]}`;
   });
 
   let arifm = document.querySelectorAll('#arithmetic_operation');
   arifm.forEach((item) => {
-    item.style.cssText = `color: #717B8D;
-    background-color: #E5F3FF`;
+    item.style.cssText = `color: ${arr[5]};
+    background-color: ${arr[6]}`;
   });
   menu.classList.add('invisible');
 }
-changeThemeOnWhite();
-
-function changeThemeOnBlue() {
-  let background = document.querySelector('#background');
-  background.style.background = `linear-gradient(#00CFFF, #0186FF)`; // color, background-color , style.color,  cssText is different
-
-  let equally = document.querySelector('#equally');
-  equally.style.cssText = `color: #DEF6FF;
-  background-color: #007FFF`;
-
-  let numbers = document.querySelectorAll('#numbers');
-  numbers.forEach((item) => {
-    item.style.color = `#D7F3FF`;
-  });
-
-  let arifm = document.querySelectorAll('#arithmetic_operation');
-  arifm.forEach((item) => {
-    item.style.cssText = `color: #DEF6FF;
-    background-color: #30BDFF`;
-  });
-  menu.classList.add('invisible');
-}
-// changeThemeOnBlue();
-
-function changeThemeOnBlack() {
-  let background = document.querySelector('#background');
-  background.style.background = `linear-gradient(#2B3237, #171C20)`;
-
-  let equally = document.querySelector('#equally');
-  equally.style.cssText = `color: #B1B1B2;
-    background-color: #303437`;
-
-  let numbers = document.querySelectorAll('#numbers');
-  numbers.forEach((item) => {
-    item.style.color = `#B1B1B2`;
-  });
-
-  let arifm = document.querySelectorAll('#arithmetic_operation');
-  arifm.forEach((item) => {
-    item.style.cssText = `color: #B5B5B5;
-    background-color: #3B4147`;
-  });
-
-  menu.classList.add('invisible');
-}
+changeColorTheme('white');
 
 function openMenuColor() {
   menu.classList.remove('invisible');

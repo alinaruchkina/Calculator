@@ -18,13 +18,13 @@ button {
   background: linear-gradient(#e8f4ff, #c7e4ff);
 }
 
-.main_blue {
+/* .main_blue {
   background: linear-gradient(blue, pink);
 }
 
 .main_black {
   background: linear-gradient(blue, pink);
-}
+}  */
 
 .content {
   display: flex;
@@ -157,7 +157,7 @@ button {
   display: flex;
 }
 
-.cyrcle_white {
+/* .cyrcle_white {
   background: white;
   border: black;
 }
@@ -166,4 +166,4 @@ button {
 }
 .cyrcle_black {
   background: black;
-}
+} */
