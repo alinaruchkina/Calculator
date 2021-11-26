@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <div id='background' class='main main_white'>
+    <div id='background' class='main'>
         <div class='content'>
             <div class="content__example" id='numbers'></div>
             <div class="content__result" id='numbers'></div>
@@ -20,15 +20,15 @@
                        <div id='menu' class='menu invisible'>
                            <div class="menu__button">
                             <div class="cyrcle"></div>
-                            <button class='dropdown' onclick="changeThemeOnWhite()">WHITE</button>
+                            <button class='dropdown' onclick="changeColorTheme('white')">WHITE</button>
                            </div>
                            <div class="menu__button">
                             <div class="cyrcle"></div>
-                            <button class='dropdown' onclick="changeThemeOnBlue()">BLUE</button>
+                            <button class='dropdown' onclick="changeColorTheme('blue')">BLUE</button>
                            </div>
                            <div class="menu__button">
                             <div class="cyrcle"></div>
-                            <button class='dropdown' onclick="changeThemeOnBlack()">BLACK</button>
+                            <button class='dropdown' onclick="changeColorTheme('black')">BLACK</button>
                            </div>
                        </div>
                         <button onclick="openMenuColor(); event.stopPropagation()" id='arithmetic_operation' class='enter__section_button color__white border__for__point'>...</button>
