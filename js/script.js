@@ -84,6 +84,9 @@ function changeColorTheme(param) {
     background-color: ${arr[6]}`;
   });
   menu.classList.add('invisible');
+
+  let colorMenu = document.querySelector('#menu');
+  colorMenu.style.background = `${arr[1]}`;
 }
 changeColorTheme('white');
 

@@ -18,14 +18,6 @@ button {
   background: linear-gradient(#e8f4ff, #c7e4ff);
 }
 
-/* .main_blue {
-  background: linear-gradient(blue, pink);
-}
-
-.main_black {
-  background: linear-gradient(blue, pink);
-}  */
-
 .content {
   display: flex;
 }
@@ -131,6 +123,7 @@ button {
   flex-direction: column;
   height: auto;
   justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .visible {
@@ -143,27 +136,44 @@ button {
 
 .dropdown {
   width: 86px;
-  height: 42px;
+  font-family: inherit;
+  font-weight: bolder;
+  padding: 2px 20px;
+  margin: 1px 0px 3px 0px;
+  height: 40px;
+  line-height: 32px;
+  font-size: 15px;
+  color: rgb(113, 123, 141);
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
 
 .cyrcle {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: solid 1px;
+  position: absolute;
+  margin-top: 13px;
 }
 
 .menu__button {
   display: flex;
 }
 
-/* .cyrcle_white {
-  background: white;
-  border: black;
+.cyrcle_white {
+  border: 2px solid #fff;
+  background: #fff;
+  margin: 14px 0px 0px 3px;
 }
 .cyrcle_blue {
-  background: blue;
+  border: 2px solid #afd0ff;
+  background: #afd0ff;
+  margin: 14px 0px 0px 3px;
 }
 .cyrcle_black {
+  border: 2px solid black;
   background: black;
-} */
+  margin: 14px 0px 0px 3px;
+}
