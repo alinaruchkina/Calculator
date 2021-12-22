@@ -6,6 +6,7 @@ let menu = document.querySelector('#menu');
 let white = ['#EBF6FF', '#C6E3FF', '#6B7486', '#B1D1FF', '#717B8D', '#717B8D', '#E5F3FF'];
 let blue = ['#00D1FF', '#0085FF', '#DEF6FF', '#007FFF', '#D7F3FF', '#DEF6FF', '#30BDFF'];
 let black = ['#2B3237', '#171C20', '#B1B1B2', '#303437', '#B1B1B2', '#B5B5B5', '#3B4147'];
+
 function writeNumber(symbol) {
   number.push(symbol);
   example = number.join('');
@@ -16,7 +17,8 @@ function writeNumber(symbol) {
 
 function enterResult() {
   result = eval(example); // принимает параметр и подсчитывает рез-т
-  document.querySelector('.content__result').innerHTML = result;
+  document.querySelector('.content__result').innerHTML = result; //ищем эл-т по его классу
+  localStorage.setItem('result', result);
 }
 
 function clearExample() {
@@ -31,7 +33,7 @@ function clearExample() {
 function deleteLastNumber() {
   if (outputExample[outputExample.length - 1] === '%') {
     number.pop(); //удаляет последний эл-т из массива и возвр его значение
-    outputExample = outputExample.slice(0, outputExample[outputExample.length - 1]); // возвр новый массив, который содержащит копии эл-тов из исходного массива
+    outputExample = outputExample.slice(0, outputExample[outputExample.length - 1]); // возвр новый массив, который содержит копии эл-тов из исходного массива
   } else {
     number.pop();
   }
@@ -98,3 +100,10 @@ function openMenuColor() {
     }
   });
 }
+
+function initialValue() {
+  if (localStorage.getItem('result')) {
+    document.querySelector('.content__result').innerHTML = localStorage.getItem('result');
+  }
+}
+initialValue();
